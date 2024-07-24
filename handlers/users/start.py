@@ -32,13 +32,12 @@ async def handle_rampage_time(message: types.Message, state: FSMContext):
     fake_data[message.from_user.id]['rampage_vaqt'] = message.text
 
     await bot.send_message(259083453, f"Sizdan shu vaqt uchun - {message.text}\n"
-                                      f"Bu foydalanuvchi ruxsat so'radingiz - {message.from_user.id}",
+                                      f"Bu foydalanuvchi ruxsat so'radingiz - @{message.from_user.username}",
                            reply_markup=admin_check_ruxsat)
     await message.answer("Sorov Yuborildi javobni kuting")
     user_id = message.from_user.id
     await state.finish()
 
-x
 from aiogram import types
 
 
